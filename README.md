@@ -10,8 +10,11 @@ Love ❌ code ✅
 
 ## <a id="features"></a >💡 〢 Features
 ✅ Grabs Google Chrome saved passwords.
+<br>
 ✅ Grabs Discord Tokens.
+<br>
 ✅ Pulls IP and location information.
+<br>
 - 
 
 ---
