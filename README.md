@@ -18,6 +18,7 @@ Love ❌ code ✅
 ## <a id="changelog"></a>💭 〢 ChangeLog
 
 ```diff
+v1.1 - second commit - simple ip grabber for now ... sends all info in a zipfile
 v1.0 - intial commit 
 ```
 
