@@ -9,7 +9,9 @@ Love ❌ code ✅
 </h1>
 
 ## <a id="features"></a >💡 〢 Features
-
+✅ Grabs Google Chrome saved passwords.
+✅ Grabs Discord Tokens.
+✅ Pulls IP and location information.
 - 
 
 ---
@@ -18,7 +20,6 @@ Love ❌ code ✅
 ## <a id="changelog"></a>💭 〢 ChangeLog
 
 ```diff
-v1.1 - second commit - simple ip grabber for now ... sends all info in a zipfile
 v1.0 - intial commit 
 ```
 
